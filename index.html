@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistick Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-box">
+            <video autoplay loop muted playsinline 
+                   oncontextmenu="return false;" 
+                   controlsList="nodownload" 
+                   class="header-video">
+                <source src="homepage-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="description">
+            VISTICK is built around one responsibility tied to its reputation — Visuals On Time.
+            Not just delivering on time, but respecting your time throughout the process so you
+            can focus on your work (and yes, make the money while we handle the visuals).
+        </p>
+
+        <div class="menu">
+            <div class="portfolio-wrapper" id="portfolio-wrapper">
+                <button class="main-btn" id="portfolio-btn">Portfolio</button>
+                <div class="submenu">
+                    <a href="project/index.html" class="sub-btn">Projects</a>
+                    <a href="ala-carte/index.html" class="sub-btn">Ala-carte</a>
+                </div>
+            </div>
+
+            <button class="main-btn" id="reach-out-trigger">Reach out & we'll help</button>
+        </div>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">So where should we chat ?</h2>
+            <div class="contact-list">
+                
+                <div class="contact-item-wrapper">
+                    <button class="contact-item" id="email-trigger" type="button">
+                        <img src="gmail.jpg" class="social-icon" alt="Email">
+                        <div class="text-group">
+                            <span class="platform">Email</span>
+                        </div>
+                    </button>
+                    <div class="email-dropdown" id="email-dropdown">
+                        <span class="email-address" id="email-address">vistick.co@gmail.com</span>
+                        <button class="email-copy-btn" id="email-copy-btn" type="button">Copy</button>
+                    </div>
+                </div>
+
+                <a href="https://x.com/VisTick_4B" target="_blank" class="contact-item">
+                    <img src="twitter.jpg" class="social-icon" alt="Twitter">
+                    <div class="text-group">
+                        <span class="platform">X / Twitter</span>
+                    </div>
+                </a>
+                
+                <a href="https://ig.me/m/vistick_4b" target="_blank" class="contact-item">
+                    <img src="instagram.jpg" class="social-icon" alt="Instagram">
+                    <div class="text-group">
+                        <span class="platform">Instagram</span>
+                    </div>
+                </a>
+                
+                <div class="contact-item-wrapper">
+                    <button class="contact-item" id="discord-trigger" type="button">
+                        <img src="discord.jpg" class="social-icon" alt="Discord">
+                        <div class="text-group">
+                            <span class="platform">Discord</span>
+                        </div>
+                    </button>
+                    <div class="discord-dropdown" id="discord-dropdown">
+                        <span class="discord-username" id="discord-username">leahcampbell_14</span>
+                        <button class="discord-copy-btn" id="discord-copy-btn" type="button">Copy</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

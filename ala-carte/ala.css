@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #f5e9d8;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.showcase-container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.projects-layout-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: clamp(32px, 7vw, 46px);
+    letter-spacing: 6px;
+    margin: 40px 0 45px 0;
+    color: black;
+    text-transform: uppercase;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    width: 100%;
+    padding-bottom: 40px;
+    transition: filter 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ala-blurred-background {
+    filter: blur(12px) grayscale(40%);
+    pointer-events: none;
+}
+
+.case-card {
+    background-color: #000000;
+    border-radius: 25px;
+    padding: 22px 18px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.case-card:hover {
+    background-color: #6a583e;
+    transform: scale(1.05);
+}
+
+.case-video-frame {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 25px;
+    overflow: hidden;
+    aspect-ratio: 1080 / 1512;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.case-image-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.case-button-container {
+    padding-top: 22px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.case-action-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #f5e9d8;
+    border-radius: 50px;
+    padding: 12px 0; 
+    width: 190px;     
+    color: #f5e9d8;
+    font-family: Arial, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.case-card:hover .case-action-btn {
+    transform: scale(1.08);
+    background-color: #ffffff;
+    border-color: transparent;
+    color: #000000;
+}
+
+@keyframes entranceFade { 
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.launch-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entranceFade 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.launch-delay {
+    animation-delay: 0.2s;
+}
+
+.ala-modal-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.ala-modal-layer.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ala-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.ala-modal-window {
+    position: relative;
+    background-color: #1c1818;
+    border: 2px solid #2b2424;
+    width: 90%;
+    max-width: 780px;
+    height: 85vh;
+    border-radius: 20px;
+    z-index: 2002;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.7);
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.ala-modal-layer.is-open .ala-modal-window {
+    transform: scale(1);
+}
+
+.ala-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #000000;
+    border: 1px solid #333333;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2010;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.ala-close-btn:hover {
+    color: #f0a26a;
+    border-color: #f0a26a;
+}
+
+.ala-modal-content-scroll {
+    padding: 50px 40px;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.ala-text-block.ala-text-large {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px; 
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 50px;
+    white-space: pre-line;
+}
+
+.ala-massive-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    color: #f0a26a;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -1.5px;
+    margin: 40px 0 25px 0;
+    text-align: center;
+}
+
+.ala-massive-header:first-of-type {
+    margin-top: 10px;
+}
+
+.ala-img-frame {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: 40px;
+}
+
+.ala-responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    .projects-layout-title {
+        margin-bottom: 35px;
+    }
+    .ala-modal-window {
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+    }
+    .ala-modal-content-scroll {
+        padding: 80px 20px 40px 20px;
+    }
+    .ala-massive-header {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+}

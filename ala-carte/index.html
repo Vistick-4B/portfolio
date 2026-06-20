@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À LA CARTE - Vistick Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ala.css">
+</head>
+<body>
+
+    <div class="showcase-container">
+        <header class="launch-fade-up">
+            <h1 class="projects-layout-title">À la carte</h1>
+        </header>
+
+        <div class="showcase-grid launch-fade-up launch-delay" id="main-grid">
+            
+            <!-- CARD 1: LEA BEAU -->
+            <div class="case-card" onclick="openStudy('modal-lea')">
+                <div class="case-video-frame">
+                    <img src="1-lea-beau.png" alt="Lea Beau" class="case-image-element">
+                </div>
+                <div class="case-button-container">
+                    <button type="button" class="case-action-btn">VIEW IT</button>
+                </div>
+            </div>
+
+            <!-- CARD 2: CURB CULTURE -->
+            <div class="case-card" onclick="openStudy('modal-curb')">
+                <div class="case-video-frame">
+                    <img src="2-curb-culture.png" alt="Curb Culture" class="case-image-element">
+                </div>
+                <div class="case-button-container">
+                    <button type="button" class="case-action-btn">VIEW IT</button>
+                </div>
+            </div>
+
+            <!-- CARD 3: VANGUARDIS WEALTH -->
+            <div class="case-card" onclick="openStudy('modal-vanguardis')">
+                <div class="case-video-frame">
+                    <img src="3-vanguardis-wealth.png" alt="Vanguardis Wealth" class="case-image-element">
+                </div>
+                <div class="case-button-container">
+                    <button type="button" class="case-action-btn">VIEW IT</button>
+                </div>
+            </div>
+
+            <!-- CARD 4: AFFINITY WEDDINGS -->
+            <div class="case-card" onclick="openStudy('modal-affinity')">
+                <div class="case-video-frame">
+                    <img src="4-affinity-weddings.png" alt="Affinity Weddings" class="case-image-element">
+                </div>
+                <div class="case-button-container">
+                    <button type="button" class="case-action-btn">VIEW IT</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOREGROUND OVERLAY STUDIES LAYER -->
+    
+    <!-- MODAL: LEA BEAU -->
+    <div id="modal-lea" class="ala-modal-layer">
+        <div class="ala-modal-backdrop" onclick="closeStudy('modal-lea')"></div>
+        <div class="ala-modal-window">
+            <button class="ala-close-btn" onclick="closeStudy('modal-lea')">✕ CLOSE</button>
+            <div class="ala-modal-content-scroll">
+                <div class="ala-text-block ala-text-large">
+                    Partner : Lea Beau (Skincare Brand)
+                    Industry : Skincare & Beauty
+                    Services Delivered : Plug & Play Newsletter Kit
+                </div>
+                <h1 class="ala-massive-header">NEWSLETTER</h1>
+                <div class="ala-img-frame">
+                    <img src="lea-beua/newsletter.jpg" alt="Lea Beau Newsletter" class="ala-responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: CURB CULTURE -->
+    <div id="modal-curb" class="ala-modal-layer">
+        <div class="ala-modal-backdrop" onclick="closeStudy('modal-curb')"></div>
+        <div class="ala-modal-window">
+            <button class="ala-close-btn" onclick="closeStudy('modal-curb')">✕ CLOSE</button>
+            <div class="ala-modal-content-scroll">
+                <div class="ala-text-block ala-text-large">
+                    Partner : Curb Culture (Music Org) 
+                    Industry : Live Music Events
+                    Services Delivered : Promotional Design — Print & Digital, Event Wristband Design
+                </div>
+                <h1 class="ala-massive-header">Event Poster</h1>
+                <div class="ala-img-frame">
+                    <img src="curb-culture/1.jpg" alt="Event Poster 1" class="ala-responsive-img">
+                </div>
+                <div class="ala-img-frame">
+                    <img src="curb-culture/2.jpg" alt="Event Poster 2" class="ala-responsive-img">
+                </div>
+
+                <h1 class="ala-massive-header">Wrist Band Design</h1>
+                <div class="ala-img-frame">
+                    <img src="curb-culture/3.jpg" alt="Wrist Band Design" class="ala-responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: VANGUARDIS WEALTH -->
+    <div id="modal-vanguardis" class="ala-modal-layer">
+        <div class="ala-modal-backdrop" onclick="closeStudy('modal-vanguardis')"></div>
+        <div class="ala-modal-window">
+            <button class="ala-close-btn" onclick="closeStudy('modal-vanguardis')">✕ CLOSE</button>
+            <div class="ala-modal-content-scroll">
+                <div class="ala-text-block ala-text-large">
+                    Partner : Vanguardis wealth (Wealth Firm)
+                    Industry : Wealth Management 
+                    Services Delivered : Primary Logo, Extended Logo Suite, Email Creatives, Promotional Display
+                </div>
+                <h1 class="ala-massive-header">Primary Logo</h1>
+                <div class="ala-img-frame">
+                    <img src="vanguardis-wealth/1.png" alt="Primary Logo" class="ala-responsive-img">
+                </div>
+
+                <h1 class="ala-massive-header">Extended Logo Suite</h1>
+                <div class="ala-img-frame">
+                    <img src="vanguardis-wealth/2.jpg" alt="Extended Logo Suite" class="ala-responsive-img">
+                </div>
+
+                <h1 class="ala-massive-header">Roll-up Banner</h1>
+                <div class="ala-img-frame">
+                    <img src="vanguardis-wealth/3.jpg" alt="Roll-up Banner" class="ala-responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: AFFINITY WEDDINGS -->
+    <div id="modal-affinity" class="ala-modal-layer">
+        <div class="ala-modal-backdrop" onclick="closeStudy('modal-affinity')"></div>
+        <div class="ala-modal-window">
+            <button class="ala-close-btn" onclick="closeStudy('modal-affinity')">✕ CLOSE</button>
+            <div class="ala-modal-content-scroll">
+                <div class="ala-text-block ala-text-large">
+                    Partner : Affinity Weddings (Bridal Magzine)
+                    Industry : Wedding Publishing 
+                    Services Delivered : Editorial Cover Design
+                </div>
+                <h1 class="ala-massive-header">Editorial Cover</h1>
+                <div class="ala-img-frame">
+                    <img src="affinity-weddings/1.jpg" alt="Editorial Cover" class="ala-responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openStudy(modalId) {
+            document.getElementById(modalId).classList.add('is-open');
+            document.getElementById('main-grid').classList.add('ala-blurred-background');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStudy(modalId) {
+            document.getElementById(modalId).classList.remove('is-open');
+            document.getElementById('main-grid').classList.remove('ala-blurred-background');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

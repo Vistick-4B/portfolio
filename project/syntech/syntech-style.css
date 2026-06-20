@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,900;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,400;1,8..144,400&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #120f0f !important;
+    font-family: 'Roboto Serif', Georgia, serif;
+    font-size: 16px;
+    color: #ffffff;
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
+}
+
+.nice-video-wrapper {
+    display: none !important;
+}
+
+.nice-scroll-content-layer {
+    position: relative;
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 50px 24px 140px 24px;
+    box-sizing: border-box;
+}
+
+/* Massive Section Heading styling utilizing Poppins 900 Black font weights */
+.nice-massive-heading {
+    font-size: 64px;
+    color: #f0a26a;
+    letter-spacing: -1.5px;
+    margin: 0 0 50px 0;
+    line-height: 1.0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Box Container Background Color */
+.nice-themed-section-box {
+    background-color: #1c1818 !important;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Centered Larger Labels Inside the Boxes */
+.nice-box-centered-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #f0a26a;
+    text-align: center;
+    margin: 0 0 25px 0;
+    letter-spacing: 0.5px;
+}
+
+/* 3D Bevel, Emboss, Flat Zero-Blur Shadow Layout Engine */
+.nice-3d-card-system {
+    background-color: #211c1c;
+    border-radius: 14px;
+    box-sizing: border-box;
+    position: relative;
+    border-top: 3px solid rgba(255, 255, 255, 0.15);
+    border-left: 3px solid rgba(255, 255, 255, 0.08);
+    border-right: 3px solid rgba(0, 0, 0, 0.45);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.nice-3d-pill-pod {
+    background-color: #2b2424;
+    border-radius: 8px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-left: 2px solid rgba(255, 255, 255, 0.05);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Layout Architecture For Cards */
+.nice-hero-container {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 110px;
+}
+
+.nice-hero-cards-row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.nice-hero-card:nth-child(1) {
+    align-self: flex-start;
+    width: 53%;
+    padding: 24px;
+}
+
+.nice-hero-card:nth-child(2) {
+    align-self: flex-end;
+    width: 48%;
+    margin-top: 50px;
+    padding: 24px;
+}
+
+/* Font Assignments */
+.nice-main-heading-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Maps directly to Black font style layout rules */
+    text-transform: uppercase;
+}
+
+.nice-sub-heading-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Typography Scale settings for Header Labels */
+.nice-ql-title {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    margin: 0 0 24px 0;
+    color: #f0a26a;
+    line-height: 1.2;
+}
+
+.nice-ql-grid, .nice-card-body-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nice-ql-label {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.nice-ql-value {
+    font-size: 14px;
+    color: #d1c7c7;
+    margin-left: 4px;
+}
+
+.nice-body-text {
+    font-family: 'Roboto Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d1c7c7;
+    margin: 0;
+}
+
+.nice-content-layout {
+    width: 100%;
+}
+
+.nice-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.nice-section-heading {
+    font-size: 64px;
+    color: #f0a26a;
+    letter-spacing: -1px;
+    margin: 0 0 30px 0;
+    line-height: 1.0;
+    position: relative;
+    z-index: 2;
+}
+
+.nice-media-block-frame {
+    width: 100%;
+    border-radius: 14px;
+    margin: 0 0 25px 0;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: none !important;
+}
+.nice-themed-section-box .nice-media-block-frame:last-child {
+    margin-bottom: 0;
+}
+
+.nice-responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+}
+
+/* --- SERVICES DELIVERED LOGIC --- */
+.nice-services-block {
+    width: 100%;
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.nice-services-block .nice-section-heading {
+    text-align: left !important;
+    font-size: 38px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+/* Vertical bullet list layout aligned to the left */
+.nice-services-vertical-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; 
+    width: 100%;
+}
+
+.nice-services-vertical-list li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.nice-services-vertical-list li::marker {
+    color: #f0a26a;
+}
+
+/* Global Responsive Layout Breakpoints */
+@media (max-width: 768px) {
+    .nice-scroll-content-layer {
+        padding: 24px 16px 140px 16px;
+    }
+    .nice-massive-heading {
+        font-size: 44px;
+        margin-bottom: 35px;
+    }
+    .nice-themed-section-box {
+        padding: 20px 16px;
+    }
+    .nice-hero-card {
+        width: calc(100% - 12px) !important; 
+        margin-top: 0 !important;
+        align-self: flex-start !important;
+    }
+    .nice-hero-cards-row {
+        gap: 35px;
+    }
+    .nice-section-heading {
+        font-size: 44px;
+        text-align: center !important;
+        margin-bottom: 12px;
+    }
+    .nice-ql-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .nice-services-block {
+        padding: 40px 20px;
+    }
+    .nice-services-block .nice-section-heading {
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-align: left !important;
+    }
+    .nice-services-vertical-list li {
+        font-size: 16px;
+    }
+}
