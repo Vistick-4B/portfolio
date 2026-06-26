@@ -247,8 +247,12 @@ body {
         margin: 0 auto;
         gap: 20px;
     }
-    .projects-layout-title {
-        margin-bottom: 35px;
+  .projects-layout-title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: clamp(28px, 6vw, 36px);
+        letter-spacing: 4px;
+        margin-bottom: 20px;
     }
     .ala-modal-window {
         height: 100vh;
@@ -263,4 +267,24 @@ body {
         font-size: 36px;
         margin-bottom: 25px;
     }
+}
+
+/* MAIN STYLES (OUTSIDE THE MEDIA QUERY) */
+.projects-layout-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: clamp(32px, 7vw, 46px);
+    letter-spacing: 6px;
+    margin: 40px 0 10px 0;
+    color: black;
+    text-transform: none !important; /* Forces it to lowercase */
+}
+
+.projects-layout-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem; /* Increased size so it's not too small */
+    color: black;
+    opacity: 0.9;
+    margin: 0 0 45px 0;
 }
