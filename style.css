@@ -39,8 +39,104 @@ body {
 }
 
 /* --- BUTTONS & MENU --- */
-.menu { display: flex; flex-direction: column;
-    align-items: center; gap: 12px; }
+.menu { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    gap: 12px; 
+}
+
+.portfolio-wrapper { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+}
+
+.main-btn, .sub-btn { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    text-transform: uppercase;
+    border: 1.5px solid black;
+    color: black !important; /* Forces system text rendering back to black */
+    text-decoration: none;
+    cursor: pointer; 
+    background-color: transparent; 
+    position: relative; 
+    overflow: hidden; 
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    -webkit-text-fill-color: black; /* Specific engine override lock for Safari iOS */
+}
+
+/* Ensure links maintain your brand colors across all interactive mobile states */
+.sub-btn:link, .sub-btn:visited, .sub-btn:hover, .sub-btn:active {
+    color: black !important;
+    text-decoration: none;
+}
+
+.main-btn::before, .sub-btn::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #ffd4cc 0%, transparent 50%, #ffd4cc 100%); 
+    opacity: 0; 
+    z-index: -1; 
+    transition: opacity 0.2s ease-in-out;
+}
+
+.main-btn { 
+    width: 280px; 
+    padding: 14px; 
+    border-radius: 50px; 
+    font-size: 16px; 
+    max-width: 90vw;
+}
+
+.sub-btn { 
+    padding: 10px 20px; 
+    border-radius: 50px;
+    font-size: 14px; 
+    display: inline-block;
+}
+
+.main-btn:hover::before, .sub-btn:hover::before, .main-btn:active::before, .sub-btn:active::before, .portfolio-wrapper.is-active .main-btn::before { 
+    opacity: 1;
+}
+
+.main-btn:hover, .sub-btn:hover { 
+    transform: scale(1.05);
+}
+
+.main-btn:active, .sub-btn:active { 
+    transform: scale(0.98); 
+}
+
+.submenu { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    max-height: 0;
+    opacity: 0; 
+    width: 100%; 
+    overflow: hidden; /* Clamps bounding layouts down tightly when closed */
+    transform: translateY(-10px); 
+    transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.5s ease, margin 0.5s ease;
+    margin-top: 0;
+    pointer-events: none; /* Destroys all link clicks entirely while collapsed */
+}
+
+.portfolio-wrapper.is-active .submenu { 
+    max-height: 60px; 
+    opacity: 1;
+    overflow: visible;
+    transform: translateY(0); 
+    margin-top: 12px;
+    pointer-events: auto; /* Restores accurate link interactions only when fully deployed */
+}    align-items: center; gap: 12px; }
 
 .portfolio-wrapper { 
     display: flex; flex-direction: column; align-items: center; width: 100%;
